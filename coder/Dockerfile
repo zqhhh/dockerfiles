@@ -7,7 +7,6 @@ RUN sudo bash init.sh
 COPY init_coder.sh .
 RUN bash init_coder.sh
 
-COPY install_go.sh .
 RUN curl -sSL sh.sadeye.cn/go.sh | sudo bash && \
     coder -c "code-server --install-extension golang.go"
 
