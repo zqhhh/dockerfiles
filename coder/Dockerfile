@@ -8,7 +8,7 @@ COPY init_coder.sh .
 RUN bash init_coder.sh
 
 RUN curl -sSL sh.sadeye.cn/go.sh | sudo bash && \
-    coder -c "code-server --install-extension golang.go"
+    code-server --install-extension golang.go
 
 # set python
 RUN sudo apt-get install -y python3-pip && \
